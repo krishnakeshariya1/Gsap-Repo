@@ -13,5 +13,21 @@ gsap.from("h1", {
     delay: 1,
     duration: 1,
     stagger: 1,
-    repeat: -1,
+})
+
+const tl = gsap.timeline();
+tl.to(".f1",{
+    duration: 1.8,
+    backgroundColor: "pink",
+    rotate: 360,
+});
+tl.to(".f2",{
+    duration: 1.8,
+    backgroundColor: "pink",
+    rotate: 360,
+});
+tl.to(".f3",{
+    duration: 1.8,
+    backgroundColor: "pink",
+    rotate: 360,
 })
