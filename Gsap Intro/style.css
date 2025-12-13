@@ -9,4 +9,24 @@ body{
     height: 100vh;
     background-color: #333;
     font-size: 62.5%;
+    padding: 1rem;
 }
+#box{
+    --r : 3rem;
+  height: 18rem; /* adjust to control the size  */
+  aspect-ratio: 1;
+  margin: calc(tan(22.5deg)*var(--r));
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%) margin-box;
+  --_g:/calc(2*var(--r)) calc(2*var(--r)) 
+    radial-gradient(#000 70%,#0000 72%);
+  --_s:calc(100% - (1 - tan(22.5deg))*var(--r));
+  mask:
+    conic-gradient(#000 0 0) no-repeat 50%/var(--_s) var(--_s),
+    top var(--_g) no-repeat space,left var(--_g) space no-repeat;
+  background-color: pink;
+}
+h1{
+    color: white;
+    line-height: 2rem;
+}
+/* HTML: <div class="wifi-icon"></div> */
