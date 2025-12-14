@@ -9,5 +9,47 @@ body{
     height: 100vh;
     background-color: #333;
     font-size: 62.5%;
-    
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2{
+    width: 100%;
+    font-size: 25px;
+    height: 100vh;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower {
+    color: black;
+  width: 200px; /* adjust to control the size */
+  aspect-ratio: 1;
+  --g:/37.02% 37.02% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 97.553% 65.451% var(--g),50% 100% var(--g),2.447% 65.451% var(--g),20.611% 9.549% var(--g),79.389% 9.549% var(--g),radial-gradient(100% 100%,#000 25.476%,#0000 calc(25.476% + 1px));
+  background-color: orange;
+}
+h1{
+    position: relative;
+    padding: 5px;
+}
+h2{
+    position: relative;
+    padding: 5px;
 }
