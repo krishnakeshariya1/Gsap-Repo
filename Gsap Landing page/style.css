@@ -184,14 +184,14 @@ overflow: hidden;
 .service-section .service-container{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    padding:  var(--padding-md);
+    padding:  var(--padding-md) ;
     gap: var(--padding-xxl);
 }
 .service-section .service-container .elem{
     flex-shrink: 0;
-    width: 35%;
+    width: 40%;
     height: 35vh;
     border: 1px solid black;
     border-radius: var(--padding-xl);
