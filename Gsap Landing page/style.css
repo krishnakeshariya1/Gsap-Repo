@@ -9,6 +9,7 @@
     /*colors-variables */
     --bg-body-Color : #fff;
     --para-Color : #333;
+    --bg-highlight-Color: #affa8c;
 
     /* padding-variables */
     --padding-xs : 0.5rem;
@@ -48,7 +49,7 @@ body{
      cursor: pointer;
 }
 
-
+/*  Header Section */
 header{
     width: 100%;
     padding: var(--padding-l) var(--padding-xxl);
@@ -80,7 +81,7 @@ header nav .nav-li{
 header nav .nav-li ul{
     display: flex;
     align-items: center;
-    gap: var(--padding-xxl);
+    gap: var(--font-main-heading);
 }
 header nav .nav-li ul li {
     font-family: "Google Sans", sans-serif;
@@ -90,7 +91,10 @@ header nav .nav-li ul li {
 }
 header nav .nav-li button{
     background-color: transparent;
+    margin-left: var(--padding-l);
 }
+
+/* About Section */
 .about-section{
     width: 100%;
     height: 80vh;
@@ -132,14 +136,17 @@ overflow: hidden;
     height: 100%;
     object-fit: contain;
 }
+
+/* Button row */
 .buttom-row{
     width: 100%;
     height: 10vh;
-    padding: 0 var(--padding-xl);
+    padding: 0 var(--padding-xxl);
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    margin: var(--padding-xxl) 0;
 }
 .buttom-row img{
     height: var(--font-xxl);
@@ -147,3 +154,46 @@ overflow: hidden;
 .buttom-row img:last-child{
     height: var(--font-main-heading);
 }
+
+/* Service Section */
+.service-section{
+    width: 100%;
+    padding: var(--padding-l) var(--padding-xl);
+    margin: var(--padding-xxl) 0;
+}
+.service-section .service-text{
+    padding: var(--padding-s) var(--padding-xl);    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: var(--padding-xxl);
+    width: 60%;
+    margin-bottom: var(--padding-xl);
+}
+.service-section .service-text h2{
+    font-family: "Numans", sans-serif;
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    background-color: var(--bg-highlight-Color);
+    padding: var(--padding-xs);
+}
+.service-section .service-text p{
+    font-family: "Google Sans", sans-serif;
+    font-size: var(--font-md);
+}
+.service-section .service-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:  var(--padding-md);
+    gap: var(--padding-xxl);
+}
+.service-section .service-container .elem{
+    flex-shrink: 0;
+    width: 35%;
+    height: 35vh;
+    border: 1px solid black;
+    border-radius: var(--padding-xl);
+}
+
