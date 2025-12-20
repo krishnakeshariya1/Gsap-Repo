@@ -54,3 +54,23 @@ tl2.from(".service-text", {
     opacity: 0,
     duration: 0.3,
 });
+tl2.from(".elem.light.left",{
+    x: -300,
+    opacity:0,
+    duration: 0.5,
+},"a1")
+tl2.from(".elem.dark.right",{
+    x: 300,
+    opacity:0,
+    duration:0.5,
+},"a1")
+tl2.from(".elem.dark.left",{
+    x: -300,
+    opacity:0,
+    duration: 0.5,
+},"a2");
+tl2.from(".elem.light.right",{
+    x:300,
+    opacity: 0,
+    duration:0.5,
+})
