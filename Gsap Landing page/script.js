@@ -73,4 +73,4 @@ tl2.from(".elem.light.right",{
     x:300,
     opacity: 0,
     duration:0.5,
-})
+},"a2")
