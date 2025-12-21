@@ -15,4 +15,25 @@ main{
   height: 100vh;
   background-color: #222;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.small-box{
+  width: 200px;
+  height: 200px;
+  background: linear-gradient( to right ,rgb(66, 204, 66), green);
+}
+.circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(to right, skyblue, rgb(76, 76, 220));
+  margin-bottom: 10px;
+}
+.box,.box2{
+  border: 2px solid white;
+  padding: 10px 20px;
 }
