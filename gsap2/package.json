@@ -1,5 +1,5 @@
 {
-  "name": "gsap-react",
+  "name": "gsap2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.14.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
