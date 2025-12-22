@@ -59,35 +59,54 @@ import { useState } from "react"
 // }
 // export default App
 
+// const App = () => {
+
+//   const Xrandom = gsap.utils.random(-700, 700, 10);
+//   const Yrandom = gsap.utils.random(-400, 400, 10);
+//   const rotateRandom = gsap.utils.random(-360, 360, 30);
+
+//   const [xVal, setXVal] = useState(0);
+//   const [yVal, setYVal] = useState(0);
+//   const [rotateVal, setRotate] = useState(0);
+
+//   const imgRef = useRef();
+
+//   useGSAP(() => {
+//     gsap.to(imgRef.current, {
+//       x: xVal,
+//       y: yVal,
+//       rotate: rotateVal,
+//       duration: 0.7,
+//       delay: 0.,
+//     })
+//   },{scope : "main", dependencies: [xVal, yVal, rotateVal]})
+//   return (
+//     <main>
+//       <img src="https://images.vexels.com/media/users/3/242241/isolated/preview/409d95bf597e130c6c1b1d2ac3f5dbf5-side-fly-geometric-color-stroke.png" alt="fly img" ref={imgRef} onClick={()=>{
+//         setXVal(Xrandom);
+//         setYVal(Yrandom);
+//         setRotate(rotateRandom);
+//       }} />
+//     </main>
+//   )
+// }
+// export default App
+
 const App = () => {
 
-  const Xrandom = gsap.utils.random(-700, 700, 10);
-  const Yrandom = gsap.utils.random(-500, 500, 10);
-  const rotateRandom = gsap.utils.random(-360, 360, 30);
+  const { contextSafe } = useGSAP() // It help us to manage the memory ;
 
-  const [xVal, setXVal] = useState(0);
-  const [yVal, setYVal] = useState(0);
-  const [rotateVal, setRotate] = useState(0);
-
-  const imgRef = useRef();
-
-  useGSAP(() => {
-    gsap.to(imgRef.current, {
-      x: xVal,
-      y: yVal,
-      rotate: rotateVal,
-      duration: 0.7,
-      delay: 0.1,
+  const boxRef = useRef();
+  const rotataFunction = contextSafe(() => {
+    gsap.to(boxRef.current, {
+      x: 100,
+      duration: 1,
     })
-  },[xVal, yVal, rotateVal])
+  })
   return (
     <main>
-      <button onClick={() => {
-        setXVal(Xrandom);
-        setYVal(Yrandom);
-        setRotate(rotateRandom);
-      }}>fly</button>
-      <img src="https://images.vexels.com/media/users/3/242241/isolated/preview/409d95bf597e130c6c1b1d2ac3f5dbf5-side-fly-geometric-color-stroke.png" alt="fly img" ref={imgRef} />
+      <button onClick={rotataFunction}>Animation</button>
+      <div className="small-box" ref={boxRef}>Box</div>
     </main>
   )
 }

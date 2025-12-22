@@ -25,8 +25,15 @@ main{
 .small-box{
   width: 200px;
   height: 200px;
-  background: linear-gradient( to right ,rgb(66, 204, 66), green);
+  background: linear-gradient( to bottom right,rgb(66, 204, 66),rgb(31, 158, 31), green);
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
 }
 .circle{
   width: 200px;
