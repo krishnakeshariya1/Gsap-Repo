@@ -16,6 +16,7 @@ main{
   background-color: #222;
   color: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
@@ -25,6 +26,7 @@ main{
   width: 200px;
   height: 200px;
   background: linear-gradient( to right ,rgb(66, 204, 66), green);
+  border-radius: 20px;
 }
 .circle{
   width: 200px;
@@ -36,4 +38,13 @@ main{
 .box,.box2{
   border: 2px solid white;
   padding: 10px 20px;
+}
+button{
+  padding: 6px 12px;
+  background: linear-gradient(to bottom, skyblue ,rgb(95, 190, 227), lightseagreen);
+  border-radius:10px ;
+  border: none;
+}
+button:active{
+  scale: 0.95;
 }
